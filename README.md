@@ -1,7 +1,8 @@
-# **High-Risk Ecommerce Transaction Prediction System**
+# **E-Commerce Risk Management Solutions**
 
 **Author:**
-  Manoj Nair
+  Manoj Nair, 
+  
   Samiksha Kodgire
 
 **Project Overview**
