@@ -1,0 +1,2 @@
+# AAI540_Group-4_E-Commerce_Risk_Management_Solutions
+An MLOps-based machine learning system for predicting high-risk ecommerce transactions. The project identifies orders likely to result in customer dissatisfaction, cancelled orders, delayed deliveries, or return-related risk using transactional and behavioural data. It has MLflow tracking, AWS SageMaker deployment, monitoring, and CI/CD workflows.
