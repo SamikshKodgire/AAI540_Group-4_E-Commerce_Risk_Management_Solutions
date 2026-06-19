@@ -34,14 +34,12 @@ def main():
     )
     
     # Connect and Ingest
-    feature_group_name = "olist-customer-risk-features"
+    feature_group_name = "olist-customer-risk-features-v2" 
     feature_group = FeatureGroup(name=feature_group_name, sagemaker_session=feature_store_session)
-    
-    # <--- THE FIX --->
-    # Force the local object to download the schema from the AWS backend
-    print("Loading feature group metadata from AWS...")
-    feature_group.load_feature_definitions() 
-    # <---------------->
+
+    # Pass the dataframe so the FeatureGroup object maps the schema!
+    print("Loading feature group metadata...")
+    feature_group.load_feature_definitions(data_frame=df) 
     
     print(f"Ingesting {len(df)} records into {feature_group_name}...")
     feature_group.ingest(data_frame=df, max_workers=3, wait=True)
